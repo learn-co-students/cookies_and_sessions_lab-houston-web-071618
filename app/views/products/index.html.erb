@@ -1,0 +1,19 @@
+Your products:
+<% if session[:cart] != nil %>
+  <% session[:cart].each do |product| %>
+    <%= product %>
+  <% end %>
+<% else %>
+  <%= "Your cart is currently empty." %>
+<% end %>
+
+
+<h1>Add an Item</h1>
+
+<form action="products/add" method="post">
+  <input type="hidden" name="authenticity_token" value="token_value">
+
+  Product:<input type="text" name="product" ><br>
+
+  <input type="submit" value="add to cart">
+</form>
