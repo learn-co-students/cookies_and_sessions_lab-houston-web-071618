@@ -1,0 +1,17 @@
+<h4>Your cart:</h4>
+<% if session[:cart] != nil %>
+  <% session[:cart].each do |product| %>
+  <li><%= product %></li>
+    <% end %>
+<% else %>
+  Your cart is empty
+<% end %>
+
+<h4>Add item</h4>
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>

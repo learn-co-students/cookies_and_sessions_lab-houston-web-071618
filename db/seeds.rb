@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# corn = Product.create(name: 'Corn')
+# cereal = Product.create(name: 'Cereal')
+# milk = Product.create(name: 'Milk')
+# soda = Product.create(name: 'Soda')
+# coco = Product.create(name: 'Coconut Water')
